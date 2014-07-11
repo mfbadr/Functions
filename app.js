@@ -168,7 +168,7 @@ function factorial(n){
     for( var i = 1; i <= n; i++){
       count *= i
     }
-  }else{count = 1}
+  }
   return count
 }
 console.log(factorial(5))
