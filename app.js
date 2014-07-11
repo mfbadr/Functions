@@ -94,7 +94,7 @@ function makeUpper(n){
 
 console.log(makeUpper('hello world'))
 
- 
+
 // can drink
 function drink(x){
   var i_canDrink = false
@@ -107,3 +107,71 @@ function drink(x){
 console.log(drink(12));
 console.log(drink(22));
 
+// letterGrade
+
+console.log('\n')
+console.log('LETTER GRADES')
+function letterGrade(n){
+  var grade;
+  if( n >= 0 && n <= 59){grade = 'F'};
+  if( n >= 60 && n <= 69){grade = 'D'};
+  if( n >= 70 && n <= 79){grade = 'C'};
+  if( n >= 80 && n <= 89){grade = 'B'};
+  if( n >= 90 && n <= 100){grade = 'A'};
+  return grade
+}
+
+var numGrade;
+numGrade = 45;
+console.log(numGrade + ' -> ' + letterGrade(numGrade));
+
+numGrade = 65;
+console.log(numGrade + ' -> ' + letterGrade(numGrade));
+
+numGrade = 75;
+console.log(numGrade + ' -> ' + letterGrade(numGrade));
+
+numGrade = 85;
+console.log(numGrade + ' -> ' + letterGrade(numGrade));
+
+numGrade = 95;
+console.log(numGrade + ' -> ' + letterGrade(numGrade));
+
+//Add tax function
+
+function addTax(b, t){
+  return  b * (1+(t/100));
+}
+
+console.log(addTax(100,10).toFixed(2));
+console.log(addTax(200,10).toFixed(2));
+console.log(addTax(100,15).toFixed(2));
+
+// sum an array
+
+function sumArray(n){
+  var sum = 0
+  for( var i = 0; i < n.length; i++){
+    sum += n[i]
+  }
+  return sum
+}
+
+var array1 = [ 1,5,45,43,2]
+console.log(array1)
+console.log(sumArray(array1))
+
+
+function factorial(n){
+  var count = 1
+  if( n != 0 && n != 1){
+    for( var i = 1; i <= n; i++){
+      count *= i
+    }
+  }else{count = 1}
+  return count
+}
+console.log(factorial(5))
+console.log(factorial(3))
+console.log(factorial(1))
+console.log(factorial(0))
