@@ -165,7 +165,7 @@ console.log(sumArray(array1))
 function factorial(n){
   var count = 1
   if( n != 0 && n != 1){
-    for( var i = 1; i <= n; i++){
+    for( var i = 2; i <= n; i++){
       count *= i
     }
   }
