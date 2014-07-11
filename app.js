@@ -176,3 +176,46 @@ console.log(factorial(3))
 console.log(factorial(1))
 console.log(factorial(0))
 console.log(factorial(15))
+
+console.log('\n')
+console.log('ROLLING DIE')
+
+function rollDie(){
+//  var  roll = (5 * Math.random())
+//  roll = Math.round(roll) + 1
+//  return roll
+  return Math.floor(((6 * Math.random()) +1 ))
+}
+
+console.log(rollDie())
+console.log(rollDie())
+console.log(rollDie())
+console.log(rollDie())
+console.log(rollDie())
+console.log(rollDie())
+
+
+function isPair(roll1, roll2){
+  //console.log('Is ' + roll1 + ' and ' + roll2 + ' a pair?')
+  return roll1 === roll2
+}
+
+
+console.log(isPair(rollDie(),rollDie()))
+console.log(isPair(rollDie(),rollDie()))
+console.log(isPair(rollDie(),rollDie()))
+console.log(isPair(rollDie(),rollDie()))
+console.log(isPair(rollDie(),rollDie()))
+
+function countPairs(n){
+  var totalPairs = 0
+  for( i = 1; i <=n ;  i++){
+    if(isPair(rollDie(),rollDie()) === true){ 
+      totalPairs++
+    }
+  }
+  return totalPairs
+}
+
+var n_countPairs = prompt('How many pairs of dice to test? ')
+console.log('Of ' + n_countPairs + ' rolls of dice, ' + countPairs(n_countPairs) +  ' were pairs')
